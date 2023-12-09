@@ -1,0 +1,11 @@
+@import "@/app/styles/variants.scss";
+.navbar {
+  @include flex(row, space-between, center);
+  padding: 40px 135px 16px 135px;
+  .navbar-links {
+    display: flex;
+    gap: 48px;
+  }
+  .navbar-right-panel {
+  }
+}
