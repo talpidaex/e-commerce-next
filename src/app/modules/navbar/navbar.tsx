@@ -1,14 +1,11 @@
+'use client'
 import Link from "next/link";
 import './navbar.scss'
 import Image from "next/image";
-
-interface NavLink {
-    label: string;
-    href: string;
-}
-
+import SearchBar from "../searchBar/searchBar";
+import { Heart } from '@styled-icons/ionicons-outline/Heart';
+import { ShoppingCart } from '@styled-icons/feather/ShoppingCart';
 export default function Navbar({ data }: { data: NavLink[] }) {
-
 
     return (
         <div className="navbar">
@@ -21,31 +18,26 @@ export default function Navbar({ data }: { data: NavLink[] }) {
                 />
             </Link>
             <div className="navbar-links">
-                {
-                    data.map((link) => (
-                        <Link
-                            key={link.label}
-                            href={link.href}
-                        >
-                            {link.label}
-                        </Link>
-                    ))
-                }
+                <ul>
+                    {
+                        data.map((link) => (
+                            <li key={link.label}>
+                                <Link
+                                    href={link.href}
+                                >
+                                    {link.label}
+                                </Link>
+                            </li>
+                        ))
+                    }
+                </ul>
             </div>
-
             <div className="navbar-right-panel">
-                <span>
-                    SearchBar
-                </span>
-                <span>
-                    Favourite
-                </span>
-
-                <span>
-                    OrderCart
-                </span>
+                <SearchBar />
+                <Heart width={30} height={30} />
+                <ShoppingCart width={30} height={30} />
             </div>
-        </div>
+        </div >
     )
 
 }
