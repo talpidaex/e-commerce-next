@@ -1,0 +1,16 @@
+@import "@/app/styles/colors.scss";
+
+.search-bar-container {
+  padding: 5px;
+  background-color: $white-secondary;
+  border-radius: 5px;
+  .search-bar-form {
+    display: flex;
+    gap: 10px;
+    .search-bar-input {
+      border: none;
+      outline: none;
+      background-color: transparent;
+    }
+  }
+}
