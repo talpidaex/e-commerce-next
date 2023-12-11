@@ -7,6 +7,7 @@
 
   @include media(md, lg, xl) {
     padding: 40px 135px 16px 135px;
+    border-bottom: 1px solid $gray;
   }
 
   .navbar-links {

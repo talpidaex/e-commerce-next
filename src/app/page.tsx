@@ -1,3 +1,4 @@
+import Hero from "./modules/hero/hero";
 import Navbar from "./modules/navbar/navbar";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
   return (
     <>
       <Navbar data={data} />
+      <Hero />
     </>
   )
 }
