@@ -1,0 +1,96 @@
+$white: #ffffff;
+$white-primary: #fafafa;
+$white-secondary: #f5f5f5;
+$red: #db4444;
+$green: #00ff66;
+$gray: #7d8184;
+$black: #000000;
+$hover-red: #e07575;
+$hover-blue: #a0bce0;
+
+$color--interval: 7.6%;
+
+// Example: Map your colour names to the variables
+
+$colors: () !default;
+$colors: map-merge(
+  (
+    "white": $white,
+    "white-primary": $white-primary,
+    "white-secondary": $white-secondary,
+    "red": $red,
+    "green": $green,
+    "gray": $gray,
+    "black": $black,
+    "hover-red": $hover-red,
+    "hover-blue": $hover-blue,
+  ),
+  $colors
+);
+
+// Deploy as background (bg) color utility classes
+
+@each $key, $value in $colors {
+  .bg-#{$key} {
+    &-100 {
+      background-color: lighten($value, $color--interval * 4);
+    }
+    &-200 {
+      background-color: lighten($value, $color--interval * 3);
+    }
+    &-300 {
+      background-color: lighten($value, $color--interval * 2);
+    }
+    &-400 {
+      background-color: lighten($value, $color--interval);
+    }
+    & {
+      background-color: $value;
+    }
+    &-600 {
+      background-color: darken($value, $color--interval);
+    }
+    &-700 {
+      background-color: darken($value, $color--interval * 2);
+    }
+    &-800 {
+      background-color: darken($value, $color--interval * 3);
+    }
+    &-900 {
+      background-color: darken($value, $color--interval * 4);
+    }
+  }
+}
+// Deploy as color utility classes
+
+@each $key, $value in $colors {
+  .#{$key} {
+    &-100 {
+      color: lighten($value, $color--interval * 4);
+    }
+    &-200 {
+      color: lighten($value, $color--interval * 3);
+    }
+    &-300 {
+      color: lighten($value, $color--interval * 2);
+    }
+    &-400 {
+      color: lighten($value, $color--interval);
+    }
+    & {
+      color: $value;
+    }
+    &-600 {
+      color: darken($value, $color--interval);
+    }
+    &-700 {
+      color: darken($value, $color--interval * 2);
+    }
+    &-800 {
+      color: darken($value, $color--interval * 3);
+    }
+    &-900 {
+      color: darken($value, $color--interval * 4);
+    }
+  }
+}

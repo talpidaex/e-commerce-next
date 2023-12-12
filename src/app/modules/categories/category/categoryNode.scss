@@ -1,0 +1,21 @@
+@import "@/app/styles/variants.scss";
+.tree-node {
+  position: relative;
+  width: fit-content;
+
+  .node-title-container {
+    width: 210px;
+    @include flex(row, space-between, center);
+    padding: 5px;
+  }
+
+  .child-nodes {
+    width: max-content;
+    position: absolute;
+    top: 0;
+    list-style: none;
+    margin-left: 10px;
+    padding: 2px;
+    border: 1px solid red;
+  }
+}
