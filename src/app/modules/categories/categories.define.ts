@@ -1,8 +1,7 @@
-export type Categories = [
+export type CategoriesType = [
   {
-    id: string;
+    title: string;
     href: string;
-    label: string;
-    subCategories: Array<Object>;
+    children: Array<Object>;
   }
 ];
