@@ -1,5 +1,5 @@
-import Hero from "./modules/hero/hero";
-import Navbar from "./modules/navbar/navbar";
+import Hero from "./modules/Hero/Hero"
+import Navbar from "./modules/Navbar/Navbar"
 
 export default function Home() {
   const data = [

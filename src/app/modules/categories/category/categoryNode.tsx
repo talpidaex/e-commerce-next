@@ -1,7 +1,8 @@
 'use client';
-import { MouseEventHandler, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChevronRight } from "@styled-icons/bootstrap/ChevronRight";
 import './categoryNode.scss';
+import Link from "next/link";
 export default function CategoryNode({ node }: { node: any }) {
 
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
@@ -24,22 +25,22 @@ export default function CategoryNode({ node }: { node: any }) {
 
     }, [parentWidth])
 
-    const handleToggle = () => {
+    const handleToggle = (e: any) => {
         setIsExpanded(!isExpanded);
     };
 
 
     return (
-        <div className="tree-node" ref={observedParentDiv} tabIndex={0}>
-            <div id={node.key} onClick={handleToggle}>
+        <div className="tree-node" ref={observedParentDiv}>
+            <div id={node.key} onMouseEnter={handleToggle} >
                 <div className="node-title-container">
-                    <span>{node.title}</span>
+                    <Link href={node.href}>{node.title}</Link>
                     {node.children.length > 0 && <ChevronRight width={10} height={10} />}
                 </div>
             </div>
             {
                 node.children.length > 0 && isExpanded &&
-                <div className="child-nodes" style={{ left: parentWidth }} onBlur={() => setIsExpanded(false)}>
+                <div className="child-nodes" style={{ left: parentWidth }}>
                     {node.children.map((childNode: any) => (
                         <div key={childNode.key}>
                             <CategoryNode key={childNode.key} node={childNode} />

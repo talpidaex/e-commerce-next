@@ -1,4 +1,5 @@
 @import "@/app/styles/variants.scss";
+@import "@/app/styles/colors.scss";
 .tree-node {
   position: relative;
   width: fit-content;
@@ -7,6 +8,10 @@
     width: 210px;
     @include flex(row, space-between, center);
     padding: 5px;
+    a {
+      text-decoration: none;
+      color: $black;
+    }
   }
 
   .child-nodes {
@@ -16,6 +21,8 @@
     list-style: none;
     margin-left: 10px;
     padding: 2px;
-    border: 1px solid red;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    background-color: $white-secondary;
   }
 }

@@ -1,4 +1,4 @@
-import CategoryNode from "./category/categoryNode";
+import CategoryNode from "./Category/CategoryNode";
 
 export default function Categories({ categories }: { categories: any }) {
 

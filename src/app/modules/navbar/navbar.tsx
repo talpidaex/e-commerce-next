@@ -2,9 +2,9 @@
 import Link from "next/link";
 import './navbar.scss'
 import Image from "next/image";
-import SearchBar from "../searchBar/searchBar";
 import { Heart } from '@styled-icons/ionicons-outline/Heart';
 import { ShoppingCart } from '@styled-icons/feather/ShoppingCart';
+import SearchBar from "../SearchBar/SearchBar";
 export default function Navbar({ data }: { data: NavLink[] }) {
 
     return (

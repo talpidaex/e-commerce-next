@@ -3,7 +3,6 @@
 
 .hero-container {
   @include flex();
-  width: 100%;
   @include media(md, lg, xl) {
     padding: 40px 135px 16px 135px;
   }
