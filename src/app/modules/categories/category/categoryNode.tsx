@@ -41,9 +41,9 @@ export default function CategoryNode({ node }: { node: any }) {
             {
                 node.children.length > 0 && isExpanded &&
                 <div className="child-nodes" style={{ left: parentWidth }}>
-                    {node.children.map((childNode: any) => (
-                        <div key={childNode.key}>
-                            <CategoryNode key={childNode.key} node={childNode} />
+                    {node.children.map((childNode: any, index: number) => (
+                        <div key={index}>
+                            <CategoryNode key={index} node={childNode} />
                         </div>
                     ))}
                 </div>

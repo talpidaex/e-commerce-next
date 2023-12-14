@@ -1,9 +1,8 @@
-import Carousel from '../Slider/ImageSlider';
-import Categories from '../Categories/Categories';
-import categoriesData from '../Categories/data';
+import categoriesData from '../categories/data';
 import './hero.scss';
-import ImageSlider from '../Slider/ImageSlider';
-import { SliderData } from '../Slider/data';
+import { SliderData } from '../slider/data';
+import Categories from '../categories/categories';
+import ImageSlider from '../slider/ImageSlider';
 
 export default function Hero() {
     return (

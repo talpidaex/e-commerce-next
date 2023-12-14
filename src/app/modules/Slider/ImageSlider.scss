@@ -1,36 +1,35 @@
+@import "@/app/styles/colors.scss";
+@import "@/app/styles/variants.scss";
+
 .slider {
   position: relative;
-  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  .icon-container {
+    @include flex(row, center, center);
+    gap: 1.5rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    gap: 1.5rem;
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border: 2px solid $gray;
+      background-color: $gray;
+      border-radius: 50%;
+      &.fill {
+        border: 2px solid $white-secondary;
+        background-color: $red;
+      }
+    }
+  }
   .image {
-    width: 672px !important;
-    height: 378px !important;
     border-radius: 10px;
-  }
-
-  .right-arrow {
-    position: absolute;
-    top: 50%;
-    right: 32px;
-    font-size: 3rem;
-    color: #000;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .left-arrow {
-    position: absolute;
-    top: 50%;
-    left: 32px;
-    font-size: 3rem;
-    color: #000;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
   }
 
   .slide {

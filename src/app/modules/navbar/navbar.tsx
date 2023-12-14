@@ -4,7 +4,7 @@ import './navbar.scss'
 import Image from "next/image";
 import { Heart } from '@styled-icons/ionicons-outline/Heart';
 import { ShoppingCart } from '@styled-icons/feather/ShoppingCart';
-import SearchBar from "../SearchBar/SearchBar";
+import SearchBar from "../searchBar/searchBar";
 export default function Navbar({ data }: { data: NavLink[] }) {
 
     return (
@@ -15,6 +15,7 @@ export default function Navbar({ data }: { data: NavLink[] }) {
                     width={118}
                     height={24}
                     alt="Picture of the Logo"
+                    priority={false}
                 />
             </Link>
             <div className="navbar-links">

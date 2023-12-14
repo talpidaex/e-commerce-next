@@ -1,21 +1,16 @@
 'use client'
 
 import { useState } from "react"
-import "./imageSlider.scss"
-import { LeftArrow } from "@styled-icons/boxicons-regular/LeftArrow";
-import { RightArrow } from "@styled-icons/boxicons-regular/RightArrow";
+import "./imageSlider.scss";
+import Image from "next/image";
 
 export default function ImageSlider({ slides }: { slides: any }) {
 
     const [current, setCurrent] = useState(0)
 
-    const nextSlide = () => {
-        setCurrent(current === slides.length - 1 ? 0 : current + 1);
-    };
-
-    const prevSlide = () => {
-        setCurrent(current === 0 ? slides.length - 1 : current - 1);
-    };
+    function handleSelectImage(index: number) {
+        setCurrent(index)
+    }
 
     if (!Array.isArray(slides) || slides.length <= 0) {
         return null;
@@ -23,8 +18,6 @@ export default function ImageSlider({ slides }: { slides: any }) {
 
     return (
         <section className='slider'>
-            <LeftArrow className='left-arrow' onClick={prevSlide} width={30} height={30} />
-            <RightArrow className='right-arrow' onClick={nextSlide} width={30} height={30} />
             {slides.map((slide, index) => {
                 return (
                     <div
@@ -32,11 +25,21 @@ export default function ImageSlider({ slides }: { slides: any }) {
                         key={index}
                     >
                         {index === current && (
-                            <img src={slide.image} alt='travel image' className='image' />
+                            <Image width={892} height={344} src={slide.image} alt='travel image' className='image' />
                         )}
                     </div>
                 );
             })}
+            <div className="icon-container">
+                {slides.map((_, index) => (
+                    <div
+                        key={index}
+                        className={`dot ${index === current ? 'fill' : ''}`}
+                        onClick={(e) => handleSelectImage(index)}
+                    />
+                ))}
+            </div>
+
         </section>
     )
 
