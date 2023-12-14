@@ -2,13 +2,14 @@
 @import "@/app/styles/media.scss";
 
 .hero-container {
-  @include flex();
+  @include flex(row, center, start);
   width: 100%;
   @include media(md, lg, xl) {
     padding: 40px 135px 16px 135px;
   }
   .hero-categories-container {
     width: 30%;
+    z-index: 1;
   }
   .hero-carousel-container {
     width: 70%;
