@@ -1,11 +1,9 @@
 const categoriesData = [
   {
     title: "Woman's Fashion",
-    href: "#",
     children: [
       {
         title: "Clothings",
-        href: "#",
         children: [
           {
             title: "Jeans",
@@ -26,7 +24,6 @@ const categoriesData = [
       },
       {
         title: "Shoes",
-        href: "#",
         children: [
           {
             title: "Trainers",
@@ -53,7 +50,6 @@ const categoriesData = [
     children: [
       {
         title: "Clothings",
-        href: "/product-detail",
         children: [
           {
             title: "Jeans",
@@ -74,7 +70,6 @@ const categoriesData = [
       },
       {
         title: "Shoes",
-        href: "#",
         children: [
           {
             title: "Trainers",
@@ -92,7 +87,7 @@ const categoriesData = [
   },
   {
     title: "Electronics",
-    href: "#",
+    href: "/product-detail",
     children: [],
   },
   {

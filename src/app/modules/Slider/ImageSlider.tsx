@@ -3,8 +3,9 @@
 import { useState } from "react"
 import "./imageSlider.scss";
 import Image from "next/image";
+import { Slide } from "./slider.define";
 
-export default function ImageSlider({ slides }: { slides: any }) {
+export default function ImageSlider({ slides }: { slides: Slide[] }) {
 
     const [current, setCurrent] = useState(0)
 

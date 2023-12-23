@@ -1,8 +1,8 @@
 import categoriesData from '../categories/data';
-import './hero.scss';
-import { SliderData } from '../slider/data';
+import { sliderImageData } from '../Slider/sliderImageData';
 import Categories from '../categories/categories';
-import ImageSlider from '../slider/ImageSlider';
+import ImageSlider from '../Slider/ImageSlider';
+import './hero.scss';
 
 export default function Hero() {
     return (
@@ -11,7 +11,7 @@ export default function Hero() {
                 <Categories categories={categoriesData} />
             </div>
             <div className='hero-carousel-container'>
-                <ImageSlider slides={SliderData} />
+                <ImageSlider slides={sliderImageData} />
             </div>
         </div>
     )
