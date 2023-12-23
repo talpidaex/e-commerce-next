@@ -3,6 +3,7 @@
 .tree-node {
   position: relative;
   width: fit-content;
+  z-index: 1;
 
   .node-title-container {
     width: 210px;
