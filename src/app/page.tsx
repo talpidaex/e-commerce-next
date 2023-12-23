@@ -1,5 +1,6 @@
 import Hero from "./modules/hero/hero"
 import Navbar from "./modules/navbar/navbar"
+import Product from "./modules/product/product"
 
 export default function Home() {
   const data = [
@@ -24,6 +25,7 @@ export default function Home() {
     <>
       <Navbar data={data} />
       <Hero />
+      <Product />
     </>
   )
 }

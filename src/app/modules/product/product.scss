@@ -1,0 +1,36 @@
+@import "@/app/styles/colors.scss";
+@import "@/app/styles/variants.scss";
+
+.product-container {
+  width: 250px;
+  height: 350px;
+  border: 1px solid red;
+  .product-image-container {
+    @include flex();
+    background-color: $white-secondary;
+    height: 250px;
+    .image {
+      position: relative;
+      width: 190px;
+      height: 180px;
+    }
+  }
+  .product-detail-container {
+    .product-title {
+      font-weight: 600;
+    }
+    height: 100px;
+    @include flex(column, space-evenly, flex-start);
+    .price-content {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+      .discount-price {
+        color: $red;
+      }
+      .price {
+        text-decoration: line-through;
+      }
+    }
+  }
+}
