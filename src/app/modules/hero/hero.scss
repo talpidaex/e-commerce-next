@@ -2,8 +2,7 @@
 @import "@/app/styles/media.scss";
 
 .hero-container {
-  @include flex(row, center, start);
-  width: 100%;
+  @include flex();
   @include media(md, lg, xl) {
     padding: 40px 135px 16px 135px;
   }

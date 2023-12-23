@@ -1,0 +1,45 @@
+@import "@/app/styles/colors.scss";
+@import "@/app/styles/variants.scss";
+
+.slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .icon-container {
+    @include flex(row, center, center);
+    gap: 1.5rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    gap: 1.5rem;
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border: 2px solid $gray;
+      background-color: $gray;
+      border-radius: 50%;
+      &.fill {
+        border: 2px solid $white-secondary;
+        background-color: $red;
+      }
+    }
+  }
+  .image {
+    border-radius: 10px;
+  }
+
+  .slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+  }
+
+  .slide.active {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+  }
+}
