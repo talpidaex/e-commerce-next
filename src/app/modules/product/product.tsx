@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "./product.scss";
+import Rating from "../rating/rating";
 export default function Product() {
 
     return (
@@ -19,7 +20,7 @@ export default function Product() {
                         <span>$</span>
                     </span>
                 </div>
-                <span>Rating</span>
+                <Rating average={2.5} count={65} />
             </div>
         </div>
     )
