@@ -1,0 +1,16 @@
+@import "@/app/styles/variants.scss";
+@import "@/app/styles/colors.scss";
+
+.rating {
+  @include flex();
+  gap: 5px;
+  .star-container {
+    display: inherit;
+  }
+  .count {
+    font-size: 15px;
+    font-weight: bold;
+    color: $gray;
+    text-align: center;
+  }
+}
